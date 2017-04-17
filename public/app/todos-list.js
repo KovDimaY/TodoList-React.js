@@ -14,13 +14,14 @@ export default class ToDosList extends React.Component {
 
 	render(){
 		return(
-			<table>
-				<ToDosListHeager />
-				<tbody>
-					{this.renderItems()}
-				</tbody>
-
-			</table>
+			<div className="row marketing">
+		        <table className="table-striped">
+					<ToDosListHeager />
+					<tbody>
+						{this.renderItems()}
+					</tbody>
+				</table>
+		    </div>			
 		);
 	}
 }

@@ -13,7 +13,7 @@ export default class ToDosListItem extends React.Component {
 		const { task, isCompleted } = this.props;
 
 		const taskStyle = {
-			color: isCompleted ? 'green' : 'red',
+			color: isCompleted ? 'green' : 'black',
 			cursor: 'pointer',
 		};
 
@@ -40,16 +40,21 @@ export default class ToDosListItem extends React.Component {
 		if (this.state.isEditing) {
 			return(
 				<td>
-					<button onClick={this.onSaveClick.bind(this)}>Save</button>
-					<button onClick={this.onCancelClick.bind(this)}>Cancel</button>
+					<button className="btn btn-success btn-sm"
+							onClick={this.onSaveClick.bind(this)}>Save</button>
+					<button className="btn btn-default btn-sm"
+							onClick={this.onCancelClick.bind(this)}>Cancel</button>
 				</td>	
 			);
 		}
 
 		return(			
 			<td>
-				<button onClick={this.onEditClick.bind(this)}>Edit</button>
-				<button onClick={this.props.deleteTask.bind(this, this.props.task)}>Delete</button>
+				<button className="btn btn-warning btn-sm"
+						onClick={this.onEditClick.bind(this)}>Edit</button>
+				<button className="btn btn-danger btn-sm" 
+						onClick={this.props.deleteTask.bind(this, this.props.task)}
+				>Delete</button>
 			</td>			
 		);
 	}

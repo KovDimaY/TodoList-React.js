@@ -3,18 +3,29 @@ import ReactDom from 'react-dom'
 
 import CreateToDo from './create-todo'
 import ToDosList from './todos-list'
+import Header from './header'
+import Footer from './footer'
+
 
 const todos = [
 {
-	task: "This is the first task",
-	isCompleted: false
-},
-{
-	task: "It is the second task",
+	task: "Download this app",
 	isCompleted: true
 },
 {
-	task: "This is the third task",
+	task: "Run this app",
+	isCompleted: true
+},
+{
+	task: "Tell to Dima that this is a cool app",
+	isCompleted: false
+},
+{
+	task: "Try to find some bugs",
+	isCompleted: false
+},
+{
+	task: "Report bugs to Dima if there will be some",
 	isCompleted: false
 }
 ]
@@ -32,7 +43,7 @@ class App extends Component {
 	render(){
 		return(
 			<div>
-				<h1>Hello from React Component!</h1>
+				<Header />
 				<CreateToDo todos={this.state.todos} createTask={this.createTask.bind(this)} />
 				<ToDosList 
 					todos={this.state.todos} 
@@ -40,6 +51,7 @@ class App extends Component {
 					saveTask={this.saveTask.bind(this)}
 					deleteTask={this.deleteTask.bind(this)}
 				/>
+				<Footer />
 			</div>
 		)
 	}

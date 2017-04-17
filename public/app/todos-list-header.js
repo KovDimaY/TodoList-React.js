@@ -7,8 +7,8 @@ export default class ToDosListHeader extends React.Component {
 			
 			<thead>
 				<tr>
-					<th>Task</th>
-					<th>Options</th>
+					<th className="col-lg-8">Task</th>
+					<th className="col-lg-4">Options</th>
 				</tr>
 			</thead>
 			

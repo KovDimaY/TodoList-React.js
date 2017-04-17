@@ -18,11 +18,22 @@ export default class ToDosList extends React.Component {
 
 	render(){
 		return(
-			<form onSubmit={this.handleCreate.bind(this)}>
-				<input type="text" placeholder="What do I need to do?" ref="createInput" />
-				<button>Create</button>
-				{this.renderError()}
-			</form>
+			<div className="jumbotron">
+        		<h1>Manage your Tasks!</h1>
+        		<p className="lead">This application helps you to manage your task. 
+        		You can create new tasks in the input area and then delete and modify them in the table below. 
+        		Also you can mark your task as completed by clicking on it. 
+        		You cannot create empty tasks and also tasks that already exist. </p>
+
+        		<p>Hope you will like it and good luck with your tasks! :)</p>
+        		
+        		<form onSubmit={this.handleCreate.bind(this)}>
+					<input type="text" placeholder="What do I need to do?" ref="createInput" />
+					<button id="create-button" className="btn btn-md btn-primary">Create</button>
+					{this.renderError()}
+				</form>
+
+      		</div>			
 		);
 	}
 
