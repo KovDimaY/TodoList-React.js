@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import React from 'react'
-import ToDosListHeager from './todos-list-header'
+import ToDosListHeader from './todos-list-header'
 import ToDosListItem from './todos-list-item'
 
 export default class ToDosList extends React.Component {
@@ -16,7 +16,7 @@ export default class ToDosList extends React.Component {
 		return(
 			<div className="row marketing">
 		        <table className="table-striped">
-					<ToDosListHeager />
+					<ToDosListHeader />
 					<tbody>
 						{this.renderItems()}
 					</tbody>
